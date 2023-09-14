@@ -1,7 +1,7 @@
 // create express server
 const express = require("express");
 // import express from "express";
-const morganMiddleware = require("./middlewares/morgan");
+const morganMiddleware = require("../middlewares/morgan");
 const app = express();
 // const port = 3000;
 
@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(morganMiddleware);
 
 // define routes
-app.use("/template", require("./routes/template"));
+app.use("/template", require("../routes/template"));
 
 // start server
 // app.listen(port, () => console.log(`Server listening on port ${port}!`));
